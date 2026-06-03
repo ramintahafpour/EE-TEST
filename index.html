@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Electron Electric portfolio for residential, commercial, and industrial electrical services in Santa Monica and Los Angeles.">
+  <title>Electron Electric | Electrical Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Electron Electric home">
+      <span class="brand-logo-frame">
+        <img src="assets/electron-electric-logo.png" alt="Electron Electric">
+      </span>
+      <span class="brand-text">
+        <strong>Licensed Electrical Contractor</strong>
+        <small>Santa Monica, CA</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" data-nav>
+      <a href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="assets/chandelier-background.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Santa Monica, CA | Since 1988</p>
+        <h1 id="hero-title">Electron Electric</h1>
+        <p class="hero-copy">Quality electrical work for residential, commercial, and industrial spaces across the Westside.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="tel:+13108287707">Call 310-828-7707</a>
+          <a class="button secondary" href="#portfolio">View work</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Company highlights">
+        <div>
+          <span>License</span>
+          <strong>#541980</strong>
+        </div>
+        <div>
+          <span>Coverage</span>
+          <strong>Bonded & insured</strong>
+        </div>
+        <div>
+          <span>Hours</span>
+          <strong>Mon-Fri, 8am-5pm</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section service-strip" aria-label="Service categories">
+      <span>Residential</span>
+      <span>Commercial</span>
+      <span>Industrial</span>
+      <span>Repairs</span>
+      <span>Remodels</span>
+    </section>
+
+    <section class="section split" id="services" aria-labelledby="services-title">
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2 id="services-title">Electrical work that keeps properties moving.</h2>
+      </div>
+      <div class="services-grid">
+        <article>
+          <span class="service-icon" aria-hidden="true">01</span>
+          <h3>Panel upgrades</h3>
+          <p>Electrical panel repair, replacement, and power upgrades for apartments, homes, and offices.</p>
+        </article>
+        <article>
+          <span class="service-icon" aria-hidden="true">02</span>
+          <h3>Remodel wiring</h3>
+          <p>Rewiring for residential remodels, office updates, apartment buildings, and tenant improvements.</p>
+        </article>
+        <article>
+          <span class="service-icon" aria-hidden="true">03</span>
+          <h3>Troubleshooting</h3>
+          <p>Practical service and repair for lighting, circuits, outlets, breakers, and hard-to-trace electrical issues.</p>
+        </article>
+        <article>
+          <span class="service-icon" aria-hidden="true">04</span>
+          <h3>Lighting systems</h3>
+          <p>Recessed lighting, landscape lighting, outdoor lighting, and efficient upgrades for finished spaces.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="section-heading centered">
+        <p class="eyebrow">Portfolio</p>
+        <h2 id="portfolio-title">Selected project capabilities</h2>
+      </div>
+
+      <div class="filter-bar" role="tablist" aria-label="Portfolio filters">
+        <button class="filter-button active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-button" type="button" data-filter="residential" role="tab" aria-selected="false">Residential</button>
+        <button class="filter-button" type="button" data-filter="commercial" role="tab" aria-selected="false">Commercial</button>
+        <button class="filter-button" type="button" data-filter="industrial" role="tab" aria-selected="false">Industrial</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <article class="project-card" data-category="residential">
+          <img src="https://electronelectric.com/images/index.jpg" alt="Electrical service work">
+          <div>
+            <span>Residential</span>
+            <h3>Whole-home remodel wiring</h3>
+            <p>Structured electrical updates for remodels, recessed lighting, switches, outlets, and panel coordination.</p>
+          </div>
+        </article>
+        <article class="project-card" data-category="commercial">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Modern office workspace">
+          <div>
+            <span>Commercial</span>
+            <h3>Office service and repair</h3>
+            <p>Responsive troubleshooting and repair for offices, management companies, and tenant spaces.</p>
+          </div>
+        </article>
+        <article class="project-card" data-category="industrial">
+          <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=900&q=80" alt="Industrial electrical environment">
+          <div>
+            <span>Industrial</span>
+            <h3>Power and equipment support</h3>
+            <p>Electrical service for industrial needs, power distribution, and operational reliability.</p>
+          </div>
+        </article>
+        <article class="project-card" data-category="residential">
+          <img src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&w=900&q=80" alt="Residential exterior lighting">
+          <div>
+            <span>Lighting</span>
+            <h3>Outdoor and landscape lighting</h3>
+            <p>Exterior lighting plans that improve safety, visibility, and curb appeal for residential properties.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section credentials" id="credentials" aria-labelledby="credentials-title">
+      <div class="credential-image">
+        <img src="https://electronelectric.com/images/Electro_Clear.png" alt="Electron Electric logo">
+      </div>
+      <div class="credential-copy">
+        <p class="eyebrow">Credentials</p>
+        <h2 id="credentials-title">Established, insured, and locally referenced.</h2>
+        <p>Electron Electric lists license #541980, bond coverage, two million dollar liability insurance, and workers compensation coverage. The company has served commercial and residential clients since 1988.</p>
+        <dl class="stats">
+          <div>
+            <dt>1988</dt>
+            <dd>Year established</dd>
+          </div>
+          <div>
+            <dt>5-9</dt>
+            <dd>Listed employees</dd>
+          </div>
+          <div>
+            <dt>$2M</dt>
+            <dd>Liability coverage</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section references" aria-labelledby="references-title">
+      <div class="section-heading">
+        <p class="eyebrow">References</p>
+        <h2 id="references-title">Trusted by property managers, businesses, and builders.</h2>
+      </div>
+      <div class="reference-list">
+        <span>Brentwood Garden Apartments</span>
+        <span>KHM Realty & Management</span>
+        <span>Ocean Towers Housing Corp.</span>
+        <span>Santa Monica Video</span>
+        <span>Imax Corporation</span>
+        <span>Studio Italy</span>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Request a free quote.</h2>
+        <address>
+          2846 Colorado Ave.<br>
+          Santa Monica, CA 90404
+        </address>
+        <span class="contact-email">electronelectric@aol.com</span>
+        <a href="tel:+13108287707">310-828-7707</a>
+      </div>
+
+      <form class="quote-form" action="https://formsubmit.co/electronelectric@aol.com" method="POST" data-form>
+        <input type="hidden" name="_subject" value="New quote request from Electron Electric website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" autocomplete="tel">
+        </label>
+        <label>
+          Project type
+          <select name="project" required>
+            <option value="">Select one</option>
+            <option>Residential electrical service</option>
+            <option>Commercial electrical service</option>
+            <option>Industrial electrical service</option>
+            <option>Repair or troubleshooting</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="button primary" type="submit">Send request</button>
+        <p class="form-status" data-form-status aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Electron Electric | Insured, bonded, license #541980</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
