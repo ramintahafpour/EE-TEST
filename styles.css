@@ -25,6 +25,7 @@ body {
   color: var(--ink);
   font-family: "Inter", Arial, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -284,6 +285,8 @@ h3 {
   overflow: hidden;
   position: absolute;
   right: clamp(18px, 5vw, 72px);
+  transform: scale(0.859375);
+  transform-origin: bottom right;
   width: min(290px, calc(100% - 36px));
   z-index: 2;
 }
@@ -366,14 +369,6 @@ h3 {
 .project-card p,
 .credential-copy p {
   color: var(--muted);
-}
-
-.service-icon {
-  color: var(--accent-dark);
-  display: block;
-  font-size: 0.82rem;
-  font-weight: 800;
-  margin-bottom: 38px;
 }
 
 .portfolio-section {
@@ -464,18 +459,23 @@ h3 {
 
 .credential-image {
   align-items: center;
+  aspect-ratio: 4 / 3;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 8px;
   display: flex;
   justify-content: center;
   min-height: 340px;
-  padding: 34px;
+  overflow: hidden;
+  padding: 0;
 }
 
 .credential-image img {
-  max-height: 160px;
-  object-fit: contain;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
 }
 
 .stats {
@@ -610,7 +610,7 @@ textarea:focus {
   font-weight: 800;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1100px) {
   .brand {
     min-width: 0;
   }
@@ -624,15 +624,28 @@ textarea:focus {
   }
 
   .hero {
-    min-height: 860px;
+    align-items: start;
+    display: block;
+    min-height: 0;
+    padding: 124px clamp(18px, 5vw, 52px) 44px;
   }
 
   .hero-panel {
-    left: clamp(18px, 5vw, 72px);
+    bottom: auto;
+    left: auto;
+    margin-top: 30px;
+    max-width: 380px;
+    position: relative;
     right: auto;
+    transform: none;
+    width: 100%;
   }
 
   .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reference-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -641,9 +654,13 @@ textarea:focus {
   .contact {
     grid-template-columns: 1fr;
   }
+
+  .credential-image {
+    max-height: 560px;
+  }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .site-header {
     padding: 12px 18px;
   }
@@ -694,16 +711,56 @@ textarea:focus {
 
   .hero {
     align-items: start;
-    min-height: 760px;
-    padding-top: 110px;
+    display: block;
+    min-height: 0;
+    padding: 124px clamp(18px, 5vw, 42px) 38px;
   }
 
-  h1 {
-    font-size: clamp(3.2rem, 18vw, 6rem);
+  .hero-content {
+    max-width: 680px;
   }
 
   .hero-panel {
-    bottom: 24px;
+    bottom: auto;
+    left: auto;
+    margin-top: 30px;
+    max-width: 380px;
+    position: relative;
+    right: auto;
+    transform: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 54px 18px;
+  }
+
+  .hero {
+    padding: 110px 18px 34px;
+  }
+
+  h1 {
+    font-size: clamp(3.1rem, 16vw, 5.8rem);
+    line-height: 0.9;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 12vw, 3.6rem);
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .hero-panel {
+    max-width: none;
+  }
+
+  .hero-panel div {
+    padding: 14px 16px;
   }
 
   .services-grid,
@@ -714,10 +771,47 @@ textarea:focus {
   }
 
   .credential-image {
-    min-height: 240px;
+    aspect-ratio: 3 / 4;
+    min-height: 0;
   }
 
   .button {
     width: 100%;
+  }
+
+  .filter-bar {
+    justify-content: stretch;
+  }
+
+  .filter-button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-logo-frame {
+    width: min(96px, 32vw);
+  }
+
+  .hero {
+    padding-top: 96px;
+  }
+
+  h1 {
+    font-size: clamp(2.75rem, 15vw, 3.8rem);
+  }
+
+  .service-strip {
+    justify-content: flex-start;
+  }
+
+  .service-strip span,
+  .filter-button {
+    font-size: 0.84rem;
   }
 }
